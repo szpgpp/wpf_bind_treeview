@@ -1,0 +1,29 @@
+<!--绑定到DataContext-->
+<Button Content="{Binding DataTime}"/>
+ 
+<!--绑定到DataContext,并设置绑定模式-->
+<Button x:Name="btn" Content="{Binding DataTime,Mode=OneTime}"/>
+ 
+<!--绑定到DataContext,并设置更新模式-->
+<Button Content="{Binding DataTime,UpdateSourceTrigger=PropertyChanged}"/>
+ 
+<!--绑定到DataContext,并设置转换模式-->
+<Button Content="{Binding DataTime,Converter={StaticResource ConvertResource},ConverterParameter=btn1}"/>
+ 
+<!--绑定到Element中指定属性-->
+<Button Content="{Binding ElementName=btn,Path=Content}"/>
+ 
+<!--绑定到相对位置中的自身模式-->
+<Button Content="{Binding RelativeSource={RelativeSource Mode=Self},Path=Tag}" Tag="MyTag"/>
+ 
+<!--绑定到相对位置中的父级别查找模式-->
+<Button Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window},Path=Content}"/>
+ 
+<!--绑定到相对位置中的父级别查找模式 绑定到指定类型-->
+<Button Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorType=Window},Path=Content}"/>
+ 
+<!--绑定到相对位置中的父级别查找模式 绑定到指定层级-->
+<Button Content="{Binding RelativeSource={RelativeSource Mode=FindAncestor,AncestorLevel=2},Path=Content}"/>
+ 
+<!--绑定到相对位置中的父级别查找模式 绑定到模板内容-->
+<Button Content="{Binding RelativeSource={RelativeSource Mode=TemplatedParent},Path=Content}"/>
