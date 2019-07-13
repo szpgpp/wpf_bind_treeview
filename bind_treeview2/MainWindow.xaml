@@ -37,10 +37,14 @@
             </TreeView.ItemTemplate>
             <TreeView.ItemContainerStyle>
                 <Style TargetType="{x:Type TreeViewItem}">
-                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Setter>
-                    <Setter Property="IsSelected" Value="{Binding IsSelected, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-                    <Style.Triggers>
-                        <DataTrigger Binding="{Binding IsExpanded}" Value="1">
+                    <!-- replace {Binding IsExpanded} with {Binding XPath=@IsExpanded}-->
+                    <!-- First Way, Expanded All after Loading Binding:  <Setter Property="IsExpanded" Value="True" />-->
+                    <!-- Second Way, Expanded One Node-->
+                    <Setter Property="IsExpanded" Value="{Binding XPath=@IsExpanded, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}" />
+                    <Setter Property="IsSelected" Value="{Binding XPath=@IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"/>
+                    <!--Third Way, Related Expanded One -->
+                        <Style.Triggers>
+                        <DataTrigger Binding="{Binding XPath=@IsExpanded}" Value="True">
                             <Setter Property="IsExpanded" Value="True"/>
                         </DataTrigger>
                     </Style.Triggers>

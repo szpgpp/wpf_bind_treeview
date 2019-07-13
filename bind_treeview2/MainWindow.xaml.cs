@@ -36,22 +36,26 @@ namespace bind_treeview2
             doc.AppendChild(dec);
 
             XmlElement xeRoot = doc.CreateElement("Root");
+            xeRoot.SetAttribute("IsSelected", "True");
             {
                 XmlElement xeStudents = doc.CreateElement("Student");                
                 xeStudents.SetAttribute("Name", "Students");
                 xeStudents.SetAttribute("IsSelected", "True");
+
                 XES = xeStudents;
                 {
                     XmlElement xeStudent = doc.CreateElement("Student");
                     xeStudent.SetAttribute("Name", "Szp");
+                    xeStudent.SetAttribute("IsSelected", "True");
                     xeStudents.AppendChild(xeStudent);
                 }
                 {
                     XmlElement xeStudent = doc.CreateElement("Student");
                     xeStudent.SetAttribute("Name", "Szh");
+                    xeStudent.SetAttribute("IsSelected", "True");
                     xeStudents.AppendChild(xeStudent);
                 }
-                xeRoot.AppendChild(xeStudents);
+                xeRoot.AppendChild(xeStudents);;
             }
             doc.AppendChild(xeRoot);
 
@@ -64,7 +68,9 @@ namespace bind_treeview2
             this.XDP.Document.NodeChanged += (sender1, e1) => { this.XDP.Refresh(); };
 
             //this.TV1.Items.Clear();
+
             this.TV1.DataContext = provider;
+
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -72,8 +78,38 @@ namespace bind_treeview2
             var provider = this.TV1.DataContext as XmlDataProvider;
             var xmldoc = provider.Document;
             var students = xmldoc.SelectSingleNode("Root/Student") as XmlElement;
-            students.SetAttribute("IsExpanded","1");
-            this.XDP.Refresh();
+            students.SetAttribute("IsExpanded","True");
+            students.SetAttribute("Name","Students_x");
+
+            //this.TV1.UpdateLayout();
+            //this.XDP.Refresh();
+            //this.XDP.DeferRefresh();
+            //binded treeview has no items.
+
+            /*
+            this.TV1.UpdateLayout();
+            
+            foreach (object item in this.TV1.Items)
+            {
+                TreeViewItem treeItem = this.TV1.ItemContainerGenerator.ContainerFromItem(item) as TreeViewItem;
+                if (treeItem != null)
+                    ExpandAll(treeItem, true);
+                treeItem.IsExpanded = true;
+            }*/
+        }
+        private void ExpandAll(ItemsControl items, bool expand)
+        {
+            foreach (object obj in items.Items)
+            {
+                ItemsControl childControl = items.ItemContainerGenerator.ContainerFromItem(obj) as ItemsControl;
+                if (childControl != null)
+                {
+                    ExpandAll(childControl, expand);
+                }
+                TreeViewItem item = childControl as TreeViewItem;
+                if (item != null)
+                    item.IsExpanded = true;
+            }
         }
     }
 }
