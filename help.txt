@@ -1,0 +1,5 @@
+﻿bind_treeView:  the simplest demo of bind-treeview (init ExpandAll)
+bind_treeView1: the init binding demo of bind-treeview (init isSelected, isChecked, isExpanded)
+bind_treeView2: the binding demo of bind-treeview (code xmlDataProvider)
+bind_treeView3: the binding demo of bind-treeview (user-object)
+bind_treeView4: the binding demo of bind-treeview (degree isExpanded)

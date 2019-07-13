@@ -8,7 +8,10 @@
         Title="MainWindow" Height="450" Width="800">
     <Window.Resources>
         <HierarchicalDataTemplate x:Key="treeViewTemplate" DataType="{x:Type local:DataItem}" ItemsSource="{Binding Items}">
-            <TextBlock Text="{Binding Header}"/>
+            <StackPanel Orientation="Horizontal">
+                <CheckBox IsChecked="{Binding IsChecked, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"></CheckBox>
+                <TextBlock Text="{Binding Header, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+            </StackPanel>
         </HierarchicalDataTemplate>
 
         <Style x:Key="TreeViewStyle" TargetType="{x:Type TreeViewItem}">
@@ -21,11 +24,12 @@
             </-->
         </Style>
     </Window.Resources>
-    <Grid x:Name="mTopLevelGrid" Margin="0,0,3.6,4"><!--ItemsSource="{Binding Source={x:Static local:Data.Instance}, Path=TreeViewItems}"-->
+    <Grid x:Name="mTopLevelGrid" Margin="0,0,3.6,4">
+        <!--ItemsSource="{Binding Source={x:Static local:Data.Instance}, Path=TreeViewItems}"-->
         <TreeView x:Name="mTreeView" Grid.Column="0"                  
                   ItemTemplate="{StaticResource treeViewTemplate}"
                   ItemContainerStyle="{StaticResource TreeViewStyle}" Margin="0,0,201,0"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="594,0,0,0" VerticalAlignment="Top" Width="191" Height="54" Click="Button_Click"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="594,97,0,0" VerticalAlignment="Top" Width="191" Height="69" Click="Button_Click_1"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="594,10,0,0" VerticalAlignment="Top" Width="165" Height="54" Click="Button_Click"/>
+        <Button Content="Button" HorizontalAlignment="Left" Margin="594,97,0,0" VerticalAlignment="Top" Width="165" Height="64" Click="Button_Click_1"/>
     </Grid>
 </Window>

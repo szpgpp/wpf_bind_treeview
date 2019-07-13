@@ -10,8 +10,8 @@
         <XmlDataProvider x:Key="xdp" XPath="FileSystem/Folder">
             <x:XData>
                 <FileSystem xmlns="">
-                    <Folder Name="Books" IsExpanded="True">
-                        <Folder Name="Programming">
+                    <Folder Name="Books" IsExpanded="True" >
+                        <Folder Name="Programming" IsSelected="True" IsChecked="True">
                             <Folder Name="Windows">
                                 <Folder Name="WPF"/>
                                 <Folder Name="MFC"/>
@@ -32,12 +32,16 @@
         <TreeView ItemsSource="{Binding Source={StaticResource xdp}}">
             <TreeView.ItemContainerStyle>
                 <Style TargetType="{x:Type TreeViewItem}">
-                    <Setter Property="IsExpanded" Value="{Binding IsExpanded, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Setter>
+                    <Setter Property="IsSelected" Value="{Binding XPath=@IsSelected, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Setter>
+                    <Setter Property="IsExpanded" Value="{Binding XPath=@IsExpanded, UpdateSourceTrigger=PropertyChanged, Mode=TwoWay}"></Setter>
                 </Style>
             </TreeView.ItemContainerStyle>
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding XPath=Folder}">
-                    <TextBlock Text="{Binding XPath=@Name}"/>
+                    <StackPanel>
+                        <CheckBox IsChecked="{Binding XPath=@IsChecked}"></CheckBox>
+                        <TextBlock Text="{Binding XPath=@Name}"/>
+                    </StackPanel>
                 </HierarchicalDataTemplate>
             </TreeView.ItemTemplate>
         </TreeView>

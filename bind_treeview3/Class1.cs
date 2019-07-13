@@ -44,8 +44,9 @@ namespace bind_treeview3
         public object Clone()
         {
             DataItem dataItem = new DataItem(Header, Deepth);
-            dataItem.IsExpanded = IsExpanded;
-            dataItem.IsSelected = IsSelected;
+            dataItem.IsExpanded = this.IsExpanded;
+            dataItem.IsSelected = this.IsSelected;
+            dataItem.IsChecked = this.IsChecked;
             dataItem.Deepth = Deepth;
             foreach (DataItem item in Items)
                 dataItem.Items.Add((DataItem)item.Clone());
@@ -74,6 +75,13 @@ namespace bind_treeview3
         {
             get { return isExpanded; }
             set { this.isExpanded = value; this.OnPropertyChanged("IsExpanded"); }
+        }
+
+        private bool isChecked;
+        public bool IsChecked
+        {
+            get { return isChecked; }
+            set { this.isChecked = value; this.OnPropertyChanged("IsChecked"); }
         }
 
         private int deepth;
@@ -122,7 +130,7 @@ namespace bind_treeview3
             items.Add(item2);
 
             DataItem item3 = new DataItem("TreeViewItem3");
-            item3.IsExpanded = true;
+            //item3.IsExpanded = true;
             item3.Items.Add(new DataItem("SubItem1", item3.Deepth));
             item3.Items.Add(new DataItem("SubItem2", item3.Deepth));
             item3.Items.Add(new DataItem("SubItem3", item3.Deepth));

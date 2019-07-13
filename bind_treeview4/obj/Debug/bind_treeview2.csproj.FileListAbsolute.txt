@@ -1,0 +1,15 @@
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\bin\Debug\bind_treeview2.exe.config
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\bin\Debug\bind_treeview2.exe
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\bin\Debug\bind_treeview2.pdb
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\MainWindow.g.cs
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\App.g.cs
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2_MarkupCompile.cache
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2_MarkupCompile.lref
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\MainWindow.baml
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.g.resources
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.Properties.Resources.resources
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.csproj.GenerateResource.cache
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.csproj.CoreCompileInputs.cache
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.exe
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.pdb
+E:\szp-workspace\wpf\bind_treeview_solution\bind_treeview2\obj\Debug\bind_treeview2.csprojAssemblyReference.cache

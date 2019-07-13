@@ -65,7 +65,7 @@ namespace bind_treeview2
                 XPath = "Root/Student"
             };
             this.XDP = provider;
-            this.XDP.Document.NodeChanged += (sender1, e1) => { this.XDP.Refresh(); };
+            //this.XDP.Document.NodeChanged += (sender1, e1) => { this.XDP.Refresh(); };
 
             //this.TV1.Items.Clear();
 

@@ -28,13 +28,17 @@ namespace bind_treeview3
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             var data = Data.Instance.TreeViewItems;
+
             this.mTreeView.ItemsSource = data;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             var data = Data.Instance.TreeViewItems[2];
+
+            data.IsChecked = true;
             data.IsExpanded = true;
+            data.IsSelected = true;
         }
     }
 }
