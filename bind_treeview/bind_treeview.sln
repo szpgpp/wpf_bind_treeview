@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28307.705
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "bind_treeview", "bind_treeview.csproj", "{8C9ED8A2-78D0-48F9-A2A1-95551BDE2769}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8C9ED8A2-78D0-48F9-A2A1-95551BDE2769}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8C9ED8A2-78D0-48F9-A2A1-95551BDE2769}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8C9ED8A2-78D0-48F9-A2A1-95551BDE2769}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8C9ED8A2-78D0-48F9-A2A1-95551BDE2769}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F94FB3AE-74CB-4FB5-BAA2-892C673B51DD}
+	EndGlobalSection
+EndGlobal

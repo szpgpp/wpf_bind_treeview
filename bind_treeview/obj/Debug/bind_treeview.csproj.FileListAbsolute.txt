@@ -1,0 +1,14 @@
+C:\Users\10972\source\repos\bind_treeview\bin\Debug\bind_treeview.exe.config
+C:\Users\10972\source\repos\bind_treeview\bin\Debug\bind_treeview.exe
+C:\Users\10972\source\repos\bind_treeview\bin\Debug\bind_treeview.pdb
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\MainWindow.g.cs
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\App.g.cs
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview_MarkupCompile.cache
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview_MarkupCompile.lref
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\MainWindow.baml
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.g.resources
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.Properties.Resources.resources
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.csproj.GenerateResource.cache
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.csproj.CoreCompileInputs.cache
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.exe
+C:\Users\10972\source\repos\bind_treeview\obj\Debug\bind_treeview.pdb
